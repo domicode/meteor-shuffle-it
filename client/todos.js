@@ -103,12 +103,12 @@ Template.lists.events({
   },
   'click .shuffle-it': function (evt) {
     console.log(Session.get('list_id'))
-    array = []
-    Todos.find({list_id: Session.get('list_id')}).forEach(function (todo) {
+    items = []
+    Todos.find({list_id: Session.get('list_id'), done: true,}).forEach(function (todo) {
       console.log(todo.text)
-      array.push(todo.text)
+      items.push(todo.text)
     });
-    alert(array[Math.floor(Math.random()*array.length)])
+    alert(items[Math.floor(Math.random()*items.length)])
   },
 });
 
