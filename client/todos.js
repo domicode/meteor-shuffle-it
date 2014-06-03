@@ -82,7 +82,7 @@ Template.lists.loading = function () {
 };
 
 Template.lists.lists = function () {
-  return Lists.find({}, {sort: {name: 1}});
+  return Lists.find({_id: Session.get('list_id')});
 };
 
 Template.lists.events({

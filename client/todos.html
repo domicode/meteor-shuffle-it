@@ -13,6 +13,12 @@
 
   <div id="side-pane">
     {{> lists}}
+    <div id="info">
+      <h4>How to use shuffle it</h4>
+      <p>Shuffle-it is a tool which lets you shuffle your lists to get a random result in case you can't make up your mind. Shuffle-it is also known as the I don't know helper.</p> 
+      <p>To create a new list, click on the new list box and hit enter or plus then add items to your list. Hit enter or plus to add the items to your list. To edit an item or a list name, simply double click it. You can deselect items and only the selected ones will be shuffeled. Click on shuffle it and you get your decision.</p>
+      <p>You can share your list by copying the URL, everybody can modify the list though.</p>
+    </div>
   </div>
 </body>
 
@@ -37,7 +43,7 @@
               <a class="list-name {{name_class}}" href="/{{_id}}">
                 {{name}}
               </a>
-            <div class="destroy-list">x</div>
+            <!-- <div class="destroy-list">x</div> -->
             </div>
           {{/if}}
         </div>
