@@ -108,7 +108,8 @@ Template.lists.events({
       console.log(todo.text)
       items.push(todo.text)
     });
-    alert(items[Math.floor(Math.random()*items.length)])
+    result = items[Math.floor(Math.random()*items.length)]
+    $("#shuffle-result span").text(result)
   },
 });
 

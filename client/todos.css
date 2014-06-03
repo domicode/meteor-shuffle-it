@@ -47,20 +47,12 @@ h3 {
     overflow: hidden;
 }
 
-#top-tag-filter {
-    left: 200px;
-    height: 44px;
-    bottom: auto;
-    background: #ddd;
-    border-bottom: 1px solid #999;
-}
-
 #help {
     padding: 8px;
 }
 
 #main-pane {
-    top: 45px;
+    top: 60px;
     bottom: 0;
     left: 220px;
     overflow: auto;
@@ -147,7 +139,6 @@ h3 {
 #new-todo-box {
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 60px;
     margin-right: 20px;
     font-size: 160%;
     position: relative;
@@ -274,4 +265,15 @@ h3 {
     color: darkgreen;
     font-weight: bold;    
     font-size: 1.5rem;
+}
+
+#shuffle-result {
+    text-align: center;
+    font-size: 3rem;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+#shuffle-result span {
+    font-weight: bold;
 }

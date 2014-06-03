@@ -3,8 +3,8 @@
 </head>
 
 <body>
-  <div id="top-tag-filter">
-    {{> tag_filter}}
+  <div id="shuffle-result">
+    Your got: <span></span>
   </div>
 
   <div id="main-pane">
@@ -21,6 +21,9 @@
   {{#if loading}}
     <div id="lists">Loading...</div>
   {{else}}
+    <div id="createList">
+      <input type="text" id="new-list" placeholder="New list" />
+    </div>
     <div id="lists">
       {{#each lists}}
         <div class="list {{selected}}">
@@ -38,9 +41,6 @@
           {{/if}}
         </div>
       {{/each}}
-    </div>
-    <div id="createList">
-      <input type="text" id="new-list" placeholder="New list" />
     </div>
   {{/if}}
 </template>
