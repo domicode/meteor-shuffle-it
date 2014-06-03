@@ -90,16 +90,18 @@ h3 {
     padding: 3px 6px;
     margin-top: 5px;
     overflow: auto;
+    margin-left: 5px;
 }
 
 #new-list {
-    width: 140px;
+    width: 135px;
     outline: none;
     border: none;
     float: left;
     position: relative;
     height: 35px;
     padding-left: 10px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #createList button {
@@ -125,6 +127,7 @@ h3 {
    outline: none;
    border: none;
    height: 40px;
+   border-radius: 5px 0px 0px 5px;   
 }
 
 #new-todo:focus {
@@ -147,7 +150,8 @@ h3 {
     height: 50px;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid blue;
+    width: 98%;
 }
 
 #item-list .todo .destroy {
@@ -289,8 +293,11 @@ h3 {
     border-radius: 3px;
     position: relative;
     float: left;
+    width: 178px;
 }
 
 #info p {
     display: none;
+    font-size: 0.8rem;
+    margin-top: 10px;
 }

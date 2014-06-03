@@ -317,7 +317,14 @@ Meteor.startup(function () {
 });
 
 
-////////// Shuffle function //////////
+////////// some frontend JS //////////
+
+$(document).ready(function(){
+  $("#info").hover(function() {
+    $("#info p").toggle()
+  });
+});
+
 
 
 
