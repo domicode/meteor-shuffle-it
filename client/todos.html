@@ -1,5 +1,5 @@
 <head>
-  <title>Todos</title>
+  <title>shuffle it</title>
 </head>
 
 <body>
@@ -23,6 +23,7 @@
   {{else}}
     <div id="createList">
       <input type="text" id="new-list" placeholder="New list" />
+      <button class="add">+</button>
     </div>
     <div id="lists">
       {{#each lists}}
@@ -52,7 +53,8 @@
         Loading...
       {{else}}
         <div id="new-todo-box">
-          <input type="text" id="new-todo" placeholder="New item" />
+          <input type="text" id="new-todo" placeholder="New item (hit enter or click + to add items)" />
+          <button class="add">+</button>
         </div>
         <ul id="item-list">
           {{#each todos}}
@@ -71,11 +73,11 @@
         <input id="todo-input" type="text" value="{{text}}" />
       </div>
     {{else}}
-      <div class="destroy"></div>
       <div class="display">
-        <input class="check" name="markdone" type="checkbox" checked={{done}} />
-        <div class="todo-text">{{text}}</div>
+        <input class="check" name="markdone" type="checkbox" id="{{text}}" checked={{done}} />
+        <label for="{{text}}" class="todo-text">{{text}}</label>
       </div>
+      <div class="destroy"></div>
     {{/if}}
   </li>
 </template>

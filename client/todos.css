@@ -133,7 +133,8 @@ h3 {
 }
 
 #createList input {
-    width: 180px;
+    width: 155px;
+    height: 25px;
 }
 
 #new-todo-box {
@@ -147,7 +148,7 @@ h3 {
 
 #new-todo {
    position: absolute;
-   width: 100%;
+   width: 90%;
 }
 
 #items-view {
@@ -165,15 +166,16 @@ h3 {
 
 #item-list .todo .destroy {
     cursor: pointer;
-    position: absolute;
-    left: 5px;
+    position: relative;
+    float: left;
+    margin-left: 20px;
     top: 15px;
     height: 20px;
     width: 20px;
 }
 
 #item-list .todo .display, #item-list .todo .edit {
-    margin-left: 30px;
+    margin-left: 5px;
     height: 100%;
     width: auto;
     float: left;
@@ -251,6 +253,12 @@ h3 {
 
 #edittag-input {
     width: 80px;
+}
+
+.add {
+    width: 25px;
+    height: 25px;
+    float: right;
 }
 
 
