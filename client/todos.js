@@ -93,11 +93,11 @@ Template.lists.events({
     // prevent clicks on <a> from refreshing the page.
     evt.preventDefault();
   },
-  'dblclick .list': function (evt, tmpl) { // start editing list name
-    Session.set('editing_listname', this._id);
-    Deps.flush(); // force DOM redraw, so we can focus the edit field
-    activateInput(tmpl.find("#list-name-input"));
-  },
+  // 'dblclick .list': function (evt, tmpl) { // start editing list name
+  //   Session.set('editing_listname', this._id);
+  //   Deps.flush(); // force DOM redraw, so we can focus the edit field
+  //   activateInput(tmpl.find("#list-name-input"));
+  // },
   'click .destroy-list': function (evt) {
     Lists.remove({_id: this._id})
   },
@@ -220,11 +220,11 @@ Template.todo_item.events({
     Todos.remove(this._id);
   },
 
-  'dblclick .display .todo-text': function (evt, tmpl) {
-    Session.set('editing_itemname', this._id);
-    Deps.flush(); // update DOM before focus
-    activateInput(tmpl.find("#todo-input"));
-  }
+  // 'dblclick .display .todo-text': function (evt, tmpl) {
+  //   Session.set('editing_itemname', this._id);
+  //   Deps.flush(); // update DOM before focus
+  //   activateInput(tmpl.find("#todo-input"));
+  // }
 });
 
 Template.todo_item.events(okCancelEvents(
