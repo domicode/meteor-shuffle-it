@@ -7,6 +7,14 @@ ul {
     list-style: none;
 }
 
+html {
+  background: url("/background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 html, body {
     height: 100%;
 }
@@ -14,7 +22,6 @@ html, body {
 body {
     font-size: 16px;
     line-height: 1.5;
-    background: #eeeeee;
     color: #333333;
 }
 
@@ -62,21 +69,21 @@ h3 {
     width: 200px;
     right: auto;
     overflow: auto;
-    background: #eee;
     border-right: 1px solid #999;
-    background: #ddd;
+    background: rgba(255,255,255,0.3);
 }
 
 
 #lists .list {
     padding: 3px 6px;
-
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
 }
 
 #lists .selected {
     margin-top: 5px;
     padding: 2px 10px;
-    background: #9be;
+    background: rgba(1,183,235,0.5);
     font-weight: bold;
 }
 
@@ -102,6 +109,12 @@ h3 {
     height: 35px;
     padding-left: 10px;
     border-radius: 5px 0px 0px 5px;
+    transition: 0.2s;
+}
+
+#new-list:focus {
+    background: rgba(0,15,135,1);
+    transition: 0.2s;
 }
 
 #createList button {
@@ -127,12 +140,14 @@ h3 {
    outline: none;
    border: none;
    height: 40px;
-   border-radius: 5px 0px 0px 5px;   
+   border-radius: 5px 0px 0px 5px;  
+   transition: 0.2s; 
 }
 
 #new-todo:focus {
-    background-color: black;
+    background-color: rgba(0,15,135,1);
     color: white;
+    transition: 0.2s;
 }
 
 #new-todo-box button {
@@ -147,29 +162,31 @@ h3 {
 
 #item-list .todo {
     display: block;
-    height: 50px;
     position: relative;
     overflow: hidden;
-    border-top: 1px solid blue;
     width: 98%;
+    background-color: rgba(255,255,255,0.5);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    border-radius: 5px;
 }
 
 #item-list .todo .destroy {
     cursor: pointer;
     position: relative;
     float: left;
-    margin-left: 20px;
-    top: 15px;
+    margin-left: 15px;
+    top: -2px;
     height: 20px;
     width: 20px;
 }
 
 #item-list .todo .display, #item-list .todo .edit {
-    margin-left: 5px;
+    margin-left: 10px;
     height: 100%;
     width: auto;
     float: left;
-    padding-top: 18px;
     line-height: 1;
     color: red;
 }
@@ -181,7 +198,7 @@ h3 {
 }
 
 #item-list .done .todo-text {
-    color: green;
+    color: rgba(0,15,135,1);
     font-weight: bold;
 }
 
@@ -233,7 +250,6 @@ h3 {
 
 #item-list .todo .todo-text {
     float: left;
-    margin-left: 10px;
     font-size: 100%;
 }
 
@@ -249,11 +265,12 @@ h3 {
     position: relative;
     float: left;
     border: none;
-    background: darkblue;
+    background: rgba(0,15,135,1);
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 0px 5px 5px 0px;
+    padding-bottom: 5px;
 }
 
 
@@ -262,28 +279,45 @@ h3 {
     position: relative;
 }
 
+
 .shuffle-it {
     width: 180px;
     height: 50px;
-    color: darkgreen;
+    color: rgba(1,183,235,1);
     font-weight: bold;    
     font-size: 1.5rem;
     outline: none;
     border: none;
-    background: orange;
+    background: rgba(0,0,0,0.4);
     padding: 10px;
     border-radius: 10px;
+    text-shadow: 2px 2px 2px #000;
+    border: 2px solid white;
 }
+
+
+.shuffle-it:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.shuffle-it:active {
+    background: rgba(0,0,0,0.7);
+}
+
 
 #shuffle-result {
     text-align: center;
     font-size: 3rem;
     margin-left: 200px;
     margin-bottom: 20px;
+    color: rgba(1,183,235,1);
 }
+
+
 
 #shuffle-result span {
     font-weight: bold;
+    text-shadow: 2px 2px 2px #fff;
 }
 
 #info {
@@ -294,6 +328,7 @@ h3 {
     position: relative;
     float: left;
     width: 178px;
+    background: rgba(255,255,255,0.6);
 }
 
 #info p {
@@ -319,4 +354,5 @@ h3 {
     position: relative;
     float: left;
     text-align: center;
+    color: white;
 }
