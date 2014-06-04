@@ -357,3 +357,11 @@ h3 {
     text-align: center;
     color: white;
 }
+
+.social-links {
+    position: absolute;
+    bottom: 8px; 
+    left: 10px;
+    float: left;
+    width: 50px;
+}
